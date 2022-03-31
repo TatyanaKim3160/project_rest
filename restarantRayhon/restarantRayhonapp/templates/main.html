@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    {% load bootstrap3 %}
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{%static 'images/adrr.png' %}" type="image/png">
+    <link rel = 'stylesheet' href="{%static 'css/style_m.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <title>{{title}}</title>
+<!--    https://smartlanding.biz/kak-zakrepit-shapku-sajta-pri-prokrutke-stranicy.html   - заморозить шапку-->
+
+
+</head>
+
+<body>
+    <table border="0px" width="80%" align="center">
+        <tr>
+            <th colspan="4" class="head">
+                <p><a><img src="{%static 'images/atl.PNG' %}" width="100%" alt="Адрас" height="90px"></a></p>
+            </th>
+        </tr>
+        <tr >
+            <th><a href="/menu"><img src="{%static 'images/menu.png' %}" width="50px" alt="Адрас" height="50px"><br>Меню </a> </th>
+            <th><a href="/delivery"><img src="{%static 'images/del.png' %}" width="50px" alt="Адрас" height="50px"><br>Доставка</a> </th>
+            <th><a href="menu.html"><img src="{%static 'images/rest.png' %}" width="50px" alt="Адрас" height="50px"><br>Адрес</a> </th>
+            <th><a href="/about"><img src="{%static 'images/info.png' %}" width="50px" alt="Адрас" height="50px"><br>Инфо</a> </th>
+        </tr>
+    </table>
+
+<table border="1" width="80%" align="center">
+    <tr>
+        <th colspan="3" align-text ="center">
+            <p><a><img src="{%static 'images/adr.jpg' %}" width="100%" alt="Адрас" height="90px"></a></p>
+<!--            Вставить фото адрасс<br>Шаблонизатор Jinja -4-->
+<!--            <p>{{person}}</p>-->
+        </th>
+    </tr>
+
+    <tr>
+        <td width="25%">
+            <br>
+        <input type="search" placeholder="Поиск"><br>
+            <p><input type="submit" value="Поиск"><br></p>
+
+        Логин: <input type="text"><br>
+        Пароль: <input type="password"><br>
+         <form action="main.html" target="_blank">
+            <button><a href="">Войти</a> </button>
+        </form>
+        <form action="register.html" target="_blank">
+            <button><a href="/register">Регистрация</a> </button>
+        </form>
+
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <p></p></td>
+        <td><h1>main</h1>
+
+            {% for per in person %}
+                <p>{{ per }}</p>
+            {% endfor %}
+
+        </td>
+
+    </tr>
+<!--    <tr>-->
+<!--        <td colspan="3" align="center">footer - union</td>-->
+<!--    </tr>-->
+</table>
+{%include 'footer.html'%}
+
+</body>
+</html>

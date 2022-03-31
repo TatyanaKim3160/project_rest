@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel = 'stylesheet' href="{%static "css/style1.css"%}">
+
+<style>
+
+ #zatemnenie {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #okno {
+        width: 300px;
+        height:110px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #0000cc;
+        border-radius: 10px;
+        color: #0000cc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+      }
+      #zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+      .close:hover {background: #e6e6ff;}
+</style>
+</head>
+<body>
+<table border="1px" width="60%" align="center">
+    <td width="25%">
+            <form action="">
+                <div class="container">
+                <h1>Регистрация</h1>
+                <p>Пожалуйста заполните все формы для регистрации</p>
+                <hr>
+
+                <label for="text"><b>Введите ФИО</b></label>
+                <input type="text" placeholder="Введите ФИО" name="FIO" required><br>
+
+                <label for="text"><b>Введите логин</b></label>
+                <input type="text" placeholder="Введите логин" name="login" required><br>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Введите Email" name="email" required><br>
+
+                <label for="psw"><b>Введите пароль</b></label>
+                <input type="password" placeholder="Введите пароль" name="psw" required><br>
+
+                <label for="psw-repeat"><b>Введите пароль еще раз</b></label>
+                <input type="password" placeholder="Введите пароль" name="psw-repeat" required><br>
+
+                <label for="psw-repeat"><b>Введите номер телефона</b></label>
+                <input type="password" placeholder="Введите номер телефона" name="number" required><br>
+                <hr>
+
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p><br>
+
+
+                    <div id="zatemnenie">
+                      <div id="okno">
+                        Поздравляю!<br>
+                          Вы успешно зарегистрированны!
+                        <form action="menu.html" target="">
+                            <button><a href="/menu" class="close"> OK</a> </button>
+                        </form>
+
+                      </div>
+                    </div>
+
+                     <button type="submit" class="registerbtn"><a href="#zatemnenie">Регистрация</a></button>
+              </div>
+
+  <div class="container signin">
+    <p>У меня уже есть пароль? <a href="#">Войти</a>.</p>
+  </div>
+</form>
+
+
+        </td>
+
+
+</table>
+</body>
+</html>
